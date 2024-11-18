@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit{
       celular: ['', [Validators.required, Validators.minLength(11)]],
       cep: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(9)]],
       logradouro: ['', [Validators.required, Validators.minLength(2)]],
-      numero: ['', [Validators.required, Validators.minLength(2)]],
+      numero: ['', [Validators.required]],
       bairro: ['', [Validators.required, Validators.minLength(2)]],
       cidade: ['', [Validators.required, Validators.minLength(2)]],
       estado: ['', [Validators.required, Validators.minLength(2)]],

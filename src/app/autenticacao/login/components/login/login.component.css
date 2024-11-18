@@ -1,0 +1,348 @@
+
+.topo {
+	width: 100%;
+	background-color: #4f574c;
+}
+
+.logo {
+	background-image: url('../../../imgs/logo.png');
+	background-size: 30%;
+	height: 200px;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #b79c89;
+	text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.botoes {
+	margin-top: 0px;
+	margin-right: 40%;
+}
+
+.clear {
+	clear: both;
+	width: 100%;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.topo {
+	width: 100%;
+	background-color: #4f574c;
+}
+
+.topo img {
+	width: 20%;
+	margin: 0 40% 0 40%;
+	padding: 50px 0 50px 0;
+}
+
+.corpo {
+    background-image: url('../../../../assets/imgs/fundo.png');
+	background-size: cover;
+	background-color: #4f574c;
+ 	margin: 0px auto;
+ 	padding: 50px 70px 50px 70px;
+ 	height: 600px;
+}
+
+/* Define o container geral para os campos */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end; /* Alinha o botão à direita */
+}
+
+/* Estilos para os diferentes tamanhos dos campos */
+.campo-1 {
+	flex: 1 1 47%; /* Tamanho completo por padrão */
+	min-width: 250px; /* Define uma largura mínima */
+	padding: 14px;
+	border-radius: 10px;
+	background-color: #c6b1a2;
+	border: none;
+	font-size: 16px;
+}
+
+.campo-2, .campo-3 {
+	flex: 1 1 30%; /* Metade do tamanho para caber lado a lado */
+	min-width: 200px;
+	padding: 14px;
+	border-radius: 10px;
+	background-color: #c6b1a2;
+	border: none;
+	font-size: 16px;
+}
+
+.campo-4 {
+  	flex: 1 1 10%; /* Linha inteira para campos maiores */
+  	min-width: 250px;
+  	padding: 14px;
+	border-radius: 10px;
+	background-color: #c6b1a2;
+	border: none;
+	font-size: 16px;
+}
+
+.campo-5 {
+  	flex: 1 1 20%; /* Campo menor para "Número" */
+  	min-width: 80px;
+  	padding: 14px;
+	border-radius: 10px;
+	background-color: #c6b1a2;
+	border: none;
+	font-size: 16px;
+}
+
+.campo-6 {
+  	flex: 1 1 21%; /* Ajuste de largura média */
+  	min-width: 100px;
+  	padding: 14px;
+	border-radius: 10px;
+	background-color: #c6b1a2;
+	border: none;
+	font-size: 16px;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+  .campo-2, .campo-3, .campo-5, .campo-6 {
+    flex: 1 1 100%; /* Todos os campos ocupam a linha inteira em telas pequenas */
+  }
+
+  .botoes {
+	margin-top: 0px;
+	margin-right: 10%;
+}
+}
+
+.termos {
+	color: #b79c89;
+	margin: -40px 0 0 60px;
+}
+
+.termos a {
+	color: #b79c89;
+	text-decoration: underline;
+}
+
+.modal {
+	display: none; /* Inicialmente oculto */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: auto;
+}
+
+.modal-content {
+	background-color: #c6b1a2;
+	margin: 10% auto;
+	padding: 20px;
+	border-radius: 8px;
+	width: 80%;
+	max-width: 500px;
+}
+
+.close {
+	color: #405141;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-enviar {
+	background-color: #3b4438;
+	color: #b79c89;
+	border: #b79c89 solid 1px;
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	margin-top: 0px;
+	cursor: pointer;
+}
+
+.botoes {
+
+}
+
+.rodape {
+	background-color: #b79c89;
+	padding: 25px 70px 30px 70px;
+	color: #3b4438;
+	font-size: 12px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+	.topo img {
+		width: 50%;
+		margin: 0 25% 0 25%;
+	}
+	.logo {
+		background-size: 90%;
+		height: 150px;
+		background-repeat: no-repeat;
+	}
+	.corpo {
+	 	background-color: #4f574c;
+	 	margin: -16px auto;
+	 	padding: 50px 70px 50px 70px;
+	 	height: auto;
+	}
+
+	.btn-enviar {
+		background-color: #3b4438;
+		color: #b79c89;
+		border: #b79c89 solid 1px;
+		padding: 10px 20px 10px 20px;
+		float: right;
+		border-radius: 10px;
+		margin-right: 0px;
+		font-weight: bold;
+		font-size: 16px;
+		margin-top: 0px;
+		margin-bottom: 10px;
+		margin-right: -25px;
+	}
+}
+
+
+
+/*******************************************************************CHECKBOX******************************************************************/
+
+.checkbox-wrapper-1 *,
+.checkbox-wrapper-1 *:after,
+.checkbox-wrapper-1 *:before {
+	box-sizing: border-box;
+ }
+
+.checkbox-wrapper-1 input {
+    position: absolute;
+    opacity: 0;
+}
+    
+.checkbox-wrapper-1 input:checked + label svg path {
+    stroke-dashoffset: 0;
+}
+    
+.checkbox-wrapper-1 input:focus + label {
+    transform: scale(1.03);
+}
+
+.checkbox-wrapper-1 input + label {
+    display: block;
+    border: 2px solid #b79c89;
+    background-color: #b79c89;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .2s ease;
+    margin: 15px;
+}
+    
+.checkbox-wrapper-1 input + label:active {
+    transform: scale(1.05);
+    border-radius: 12px;
+    background-color: #d8c0af;
+}
+    
+.checkbox-wrapper-1 input + label svg {
+    pointer-events: none;
+    padding: 5%;
+}
+
+.checkbox-wrapper-1 input + label svg path {      
+    fill: none;     
+    stroke: #3b4438;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 101;
+    transition: all 250ms cubic-bezier(1,0,.37,.91);
+}
+
+.checkbox-wrapper-2 *,
+  .checkbox-wrapper-2 *:after,
+  .checkbox-wrapper-2 *:before {
+    box-sizing: border-box;
+  }
+
+  .checkbox-wrapper-2 input {
+    position: absolute;
+    opacity: 0;
+  }
+    
+  .checkbox-wrapper-2 input:checked + label svg path {
+    stroke-dashoffset: 0;
+  }
+    
+  .checkbox-wrapper-2 input:focus + label {
+    transform: scale(1.03);
+  }
+
+  .checkbox-wrapper-2 input + label {
+    display: block;
+    border: 2px solid #b79c89;
+    background-color: #b79c89;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .2s ease;
+    margin: 15px;
+  }
+    
+  .checkbox-wrapper-2 input + label:active {
+    transform: scale(1.05);
+    border-radius: 12px;
+    background-color: #d8c0af;
+  }
+    
+  .checkbox-wrapper-2 input + label svg {
+    pointer-events: none;
+    padding: 5%;
+  }
+
+  .checkbox-wrapper-2 input + label svg path {      
+    fill: none;     
+    stroke: #3b4438;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 101;
+    transition: all 250ms cubic-bezier(1,0,.37,.91);
+  }

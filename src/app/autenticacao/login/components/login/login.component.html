@@ -1,0 +1,50 @@
+<div class="topo">
+    <div class="logo"></div>
+</div>    
+    <div class="corpo">
+        <h1>CADASTRO</h1>
+        <form [formGroup]="form" class="form-container" novalidate>
+            <input class="campo-1" placeholder="Nome Completo" formControlName="nome">
+            <input class="campo-1" placeholder="Nome Social" formControlName="nomeSocial">
+            <input class="campo-2" placeholder="CPF" formControlName="cpf" mascara="999.999.999-99">
+            <input class="campo-2" placeholder="Email" formControlName="email">
+            <input class="campo-2" placeholder="Celular" formControlName="celular" mascara="(99)99999-9999">
+            <input class="campo-3" placeholder="CEP" formControlName="cep" mascara="99999-999" minlength="8" maxlength="9" validadorCep required>
+            <input class="campo-3" placeholder="Endereço" formControlName="logradouro" required>
+            <input class="campo-5" placeholder="Nº" formControlName="numero" required>
+            <input class="campo-6" placeholder="Bairro" formControlName="bairro" required>
+            <input class="campo-6" placeholder="Cidade" formControlName="cidade" required>
+            <input class="campo-6" placeholder="Estado" formControlName="estado" required>
+            <input class="campo-6" placeholder="Complemento" formControlName="complemento">
+            <div class="botoes">
+                <div class="checkbox-wrapper-2">
+                <input type="checkbox" id="check-2" formControlName="adesao"/>
+                    <label for="check-2" style="--size: 30px">
+                      <svg viewBox="0,0,50,50">
+                        <path d="M5 30 L 20 45 L 45 5"></path>
+                      </svg>
+                    </label> 
+                </div>
+                <p class="termos">Aceito a <b>adesão gratuita</b> como cliente associado da MM Seikatu Center Suzano Ltda</p>
+           
+                <div class="checkbox-wrapper-1">
+                  <input type="checkbox" id="check-1" formControlName="termos"/>
+                  <label for="check-1" style="--size: 30px">
+                    <svg viewBox="0,0,50,50">
+                      <path d="M5 30 L 20 45 L 45 5"></path>
+                    </svg>
+                  </label> 
+                </div>
+                <p class="termos">Eu li e concordo com os <a href="https://www.guiaseikatsu.com.br/pg/termos-de-uso.html" target="_blank">termos de uso</a></p>
+            </div>
+            
+            <div class="btn-enviar-container">
+                <button type="submit" class="btn-enviar" (click)="logar()">ENVIAR</button>
+            </div>
+        </form>
+    </div>
+    <div class="rodape">
+        <p>TODOS DIREITOS RESERVADOS © <span style="float: right;">DESENVOVIDO POR MM TECHNO</span></p>
+    </div>
+
+    

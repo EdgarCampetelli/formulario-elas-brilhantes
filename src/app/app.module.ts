@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatButtonModule} from '@angular/material/button';
-import { LoginModule } from './autenticacao';
+
 import { AppRoutingModule } from './app.routes';
 import { LoginRoutingModule } from './autenticacao/login/login-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
+import { LoginModule } from './autenticacao/login';
 
 
 
@@ -35,7 +36,7 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatSnackBarModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
   ]
 })
 export class AppModule { }

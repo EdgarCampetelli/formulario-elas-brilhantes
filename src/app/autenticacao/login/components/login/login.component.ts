@@ -25,10 +25,10 @@ export class LoginComponent implements OnInit{
   
 
   form!: FormGroup;
-  //loginModule : Login = new Login();
-  //enderecoModule : Endereco = new Endereco();
-  //contatoModule : Contato = new Contato();
-  //emailModule : Email = new Email();
+  loginModule : Login = new Login();
+  enderecoModule : Endereco = new Endereco();
+  contatoModule : Contato = new Contato();
+  emailModule : Email = new Email();
 
   constructor( 
     private fb: FormBuilder,
@@ -80,24 +80,23 @@ export class LoginComponent implements OnInit{
       estado : this.form.value.estado,
       pais : this.form.value.pais
     })
-
     this.loginService.logar(login)
       .subscribe(
        (data:any) => {
           const msg : string = "Formulario preenchido com sucesso !";
           this.snackBar.open(msg, "Sucesso", {duration:5000});
-          this.router.navigate(['/sucesso']);
+          this.router.navigate([`/sucesso/`]);    
         },
-        err => {
-         this.snackBar.open("Erro banco ","Erro", {duration:5000});
-          let msg: string = "Tente novamente em instantes.";
-          if(err.status == 400){
-          msg = err.error.errors.join('Erro ao enviar');
-         }
-          this.snackBar.open(msg,"Erro", {duration:5000});
+      err => {
+        this.snackBar.open("Erro banco ","Erro", {duration:5000});
+        let msg: string = "Tente novamente em instantes.";
+        if(err.status == 400){
+        msg = err.error.errors.join('Erro ao enviar');
         }
-      );
-
-      return alert(JSON.stringify(login));
+        this.snackBar.open(msg,"Erro", {duration:5000});
+      }
+    );
+      
+  
   }
 }

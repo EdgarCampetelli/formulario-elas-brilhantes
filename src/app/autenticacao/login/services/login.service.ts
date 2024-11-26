@@ -16,7 +16,5 @@ export class LoginService {
   logar(login: any): Observable<any> {
     return this.http.put( 'http://mais-dev.mmtechno.com.br/api/' + this.PATH + '/3', login)
   }
-  //edit(id: any, payload: any): Observable<any> {
-    //return this.http.put<any>(`http://mais-dev.mmtechno.com.br/api/email/${id}`, payload);
-  //}
+  
 }
